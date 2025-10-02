@@ -1,0 +1,52 @@
+.app-title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.active-link {
+    border-bottom: 2px solid white;
+}
+.mat-toolbar {
+        color: white;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        min-height: 64px;
+        background: #b71c1c;
+        color: #fff;    
+        box-shadow: 0 2px 4px rgba(183,28,28,0.15);
+        display: flex;
+        align-items: center;
+        padding: 0 24px;
+          position: fixed;
+        top: 0;
+     left: 0;
+  right: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+  z-index: 1000;
+}
+
+.mat-toolbar-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.mat-button, .mat-icon-button {
+        color: white;
+}
+
+.mat-button, .mat-icon-button {
+        color: #b71c1c;
+        background-color: #fff;
+}
+

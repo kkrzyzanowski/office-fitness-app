@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap');
+
+@include mat.core();
+
+.mat-toolbar {
+  background-color: #800020;
+  color: white;
+}
+
+.mat-button {
+  color: white !important;
+}
+
+:root {
+  font-family: 'Orbitron', 'Arial Black', Arial, sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Jeśli używasz mat-sidenav-container lub innego wrappera */
+.mat-sidenav-container {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 100%;
+}
+
+.app-content {
+  padding-top: 64px;
+}
+
+/* Jeśli chcesz też dla mobile/tablet */
+@media (max-width: 600px) {
+  .app-content {
+    padding-top: 56px;
+  }
+}

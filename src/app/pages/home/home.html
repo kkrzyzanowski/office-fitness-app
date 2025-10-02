@@ -1,0 +1,20 @@
+<h1>Biuro Fit</h1>
+
+<div class="categories">
+    <div 
+        class="category-card" 
+        *ngFor="let category of categories" 
+        (click)="goToCategory(category)">
+        {{ category | titlecase }}
+    </div>
+</div>
+
+<hr />
+<button (click)="showRandom()">Losowe ćwiczenie</button>
+
+<div *ngIf="randomExercise" class="random-exercise">
+    <h2>Losowe ćwiczenie:</h2>
+    <h3>{{ randomExercise.name }}</h3>
+    <p>{{ randomExercise.description }}</p>
+    <p>Liczba powtórzeń: {{ randomExercise.repetitions }}</p>
+</div>
