@@ -1,6 +1,4 @@
-$card-bg: #800000;
-$card-text: #fff;
-$card-hover: #a83232;
+
 
 .categories {
     display: flex;
@@ -11,8 +9,8 @@ $card-hover: #a83232;
 }
 
 .category-card {
-    background: $card-bg;
-    color: $card-text;
+    background: var(--theme-color);
+    color: #fff;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     width: 350px;
@@ -29,7 +27,7 @@ $card-hover: #a83232;
     transition: background 0.2s, transform 0.2s;
 
     &:hover {
-        background: $card-hover;
+        background: var(--hover-color);
         transform: translateY(-4px) scale(1.03);
     }
 }
@@ -39,8 +37,8 @@ h1 {
     margin-top: 0;
     font-family: 'Orbitron', 'Arial Black', Arial, sans-serif;
     font-style: italic;
-    background: $card-bg;
-    color: $card-text;
+    background: var(--theme-color);
+    color: #fff;
     width: 100%;
     display: inline-block;
     padding: 16px 0;
@@ -51,15 +49,15 @@ button {
     margin: 24px auto;
     padding: 12px 32px;
     font-size: 1.1rem;
-    background: $card-bg;
-    color: $card-text;
+    background: var(--theme-color);
+    color: #fff;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     transition: background 0.2s;
 
     &:hover {
-        background: $card-hover;
+        background: var(--hover-color);
     }
 }
 
