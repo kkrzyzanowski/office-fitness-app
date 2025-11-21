@@ -1,0 +1,125 @@
+.contact-form-container {
+  width: 100%;
+  padding: 48px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--theme-color);
+
+  h2 {
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+    color: #fff;
+  }
+
+  form {
+    max-width: 720px;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 28px;
+    border-radius: 8px;
+    border: 4px solid var(--theme-color);
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      border: 2px solid var(--theme-color);
+      pointer-events: none;
+      border-radius: 6px;
+    }
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.05fr;
+    gap: 20px;
+    align-items: stretch;
+  }
+
+  .left-column,
+  .right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .message-field textarea.mat-input-element {
+    min-height: 100%;
+    resize: vertical;
+  }
+
+  .form-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 18px;
+
+    button.send {
+      background-color: var(--theme-color);
+      color: #fff;
+      font-family: 'Orbitron', sans-serif;
+      padding: 10px 24px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: var(--hover-color);
+      }
+
+      &:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+    }
+}
+}
+
+@media (max-width: 720px) {
+  .contact-form-container {
+    padding: 24px 8px; 
+  }
+
+  .contact-form-container form {
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+  }
+
+  .contact-form-container form::after {
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+  }
+
+  .contact-form-container .form-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .left-column,
+  .right-column {
+    gap: 8px;
+  }
+
+  .message-field textarea.mat-input-element {
+    min-height: 140px;
+  }
+
+  .form-actions {
+    margin-top: 12px;
+  }
+
+  .form-actions button.send {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
+}

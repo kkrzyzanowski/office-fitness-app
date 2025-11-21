@@ -1,0 +1,36 @@
+<div class="contact-form-container">
+  <h2>Kontakt</h2>
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <div class="form-grid">
+      <div class="left-column">
+        <mat-form-field appearance="outline" class="field">
+          <mat-label>Imię i nazwisko</mat-label>
+          <input matInput formControlName="name" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="field">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" type="email" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="field">
+          <mat-label>Numer telefonu</mat-label>
+          <input matInput formControlName="phone" required>
+        </mat-form-field>
+      </div>
+
+      <div class="right-column">
+        <mat-form-field appearance="outline" class="field message-field">
+          <mat-label>Wiadomość</mat-label>
+          <textarea matInput formControlName="message" rows="10" required></textarea>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <button mat-raised-button type="submit" [disabled]="!contactForm.valid" class="send">
+        Wyślij
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,49 @@
+<mat-toolbar color="primary">
+  <a routerLink="/" class="logo-link">
+    <span class="app-title">
+      Office Fitness
+      <img src="assets/logo.png" alt="Logo" class="logo" />
+    </span>
+  </a>
+  <span class="spacer"></span>
+
+  <nav class="desktop-menu">
+    <a mat-button routerLink="/home" routerLinkActive="active-link">Strona główna</a>
+    <a mat-button routerLink="/achievements" routerLinkActive="active-link">Osiągnięcia</a>
+    <a mat-button routerLink="/transformations" routerLinkActive="active-link">Przemiany</a>
+    <a mat-button routerLink="/gallery" routerLinkActive="active-link">Galeria</a>
+    <a mat-button routerLink="/about-me" routerLinkActive="active-link">O mnie</a>
+    <a mat-button routerLink="/book-training" routerLinkActive="active-link">Umów trening</a>
+    <a mat-button routerLink="/home" fragment="contact">Kontakt</a>
+  </nav>
+
+  <button
+    mat-icon-button
+    (click)="sidenav.toggle()"
+    class="burger-menu"
+    aria-label="menu"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+</mat-toolbar>
+
+
+<mat-sidenav-container class="layout-container">
+
+  <mat-sidenav #sidenav mode="over" position="end" class="mobile-sidenav">
+    <nav class="mobile-menu">
+      <a mat-button routerLink="/home" (click)="sidenav.close()">Strona główna</a>
+      <a mat-button routerLink="/achievements" (click)="sidenav.close()">Osiągnięcia</a>
+      <a mat-button routerLink="/transformations" (click)="sidenav.close()">Przemiany</a>
+      <a mat-button routerLink="/gallery" (click)="sidenav.close()">Galeria</a>
+      <a mat-button routerLink="/about-me" (click)="sidenav.close()">O mnie</a>
+      <a mat-button routerLink="/book-training" (click)="sidenav.close()">Umów trening</a>
+      <a mat-button routerLink="/home" fragment="contact">Kontakt</a>
+    </nav>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
