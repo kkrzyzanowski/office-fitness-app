@@ -1,14 +1,12 @@
 import { Component, ViewChild } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { MatSidenav, MatSidenavContent, MatSidenavContainer } from '@angular/material/sidenav';
+import { MatSidenav } from '@angular/material/sidenav';
+import { SharedModule } from '../../shared/shared-module';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterModule, MatToolbarModule, MatButtonModule, MatIconModule, MatSidenavContent, MatSidenavContainer, MatSidenav],
+  imports: [RouterModule, SharedModule],
   templateUrl: './navbar.html',
   styleUrls: ['./navbar.scss']
 })

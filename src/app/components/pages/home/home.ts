@@ -1,15 +1,13 @@
-import { Component, Renderer2 } from '@angular/core';
-import { ExerciseService } from '../../../services/exercise';
-import { ActivatedRoute, NavigationEnd, Router, RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common';
+import { Component} from '@angular/core';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { Slogan } from "./slogan/slogan";
 import { Description } from "./description/description";
 import { ContactForm } from "./contact-form/contact-form";
-import { filter } from 'rxjs';
+import { SharedModule } from '../../../shared/shared-module';
 
 @Component({
     selector: 'app-home',
-    imports: [CommonModule, RouterModule, Slogan, Description, ContactForm],
+    imports: [SharedModule, RouterModule, Slogan, Description, ContactForm],
     templateUrl: './home.html',
     styleUrl: './home.scss'
 })

@@ -1,16 +1,10 @@
 import { Component } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { SharedModule } from '../../../../shared/shared-module';
 
 @Component({
   selector: 'app-contact-form',
-  imports: [MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    ReactiveFormsModule],
+  imports: [SharedModule],
   templateUrl: './contact-form.html',
   styleUrl: './contact-form.scss'
 })
