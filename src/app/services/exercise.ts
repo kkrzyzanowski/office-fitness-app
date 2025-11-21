@@ -6,7 +6,7 @@ export interface ExerciseData {
   description: string;
   repetitions: string;
   category: string;
-  icon: string; // np. nazwa ikony lub ścieżka do pliku
+  icon: string; 
   done: boolean;
 }
 

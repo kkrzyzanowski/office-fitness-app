@@ -24,14 +24,11 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
+              "src/assets"
             ],
+            
             "styles": [
-              "src/styles.scss",
-              "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+              "src/styles.scss"
             ]
           },
           "configurations": {
