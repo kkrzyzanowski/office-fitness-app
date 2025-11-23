@@ -1,0 +1,147 @@
+.slogan-parallelogram {
+  width: 100%;
+  max-width: 1290px;
+  margin: 48px auto;
+  height: 240px;
+  display: flex;
+  position: relative;
+}
+
+.par-left,
+.par-right {
+flex: 1;
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+transform: skewX(-10deg);
+}
+
+.par-left { background-color: var(--theme-color); }
+.par-right { background-color: var(--hover-color); }
+
+.par-content {
+transform: skewX(10deg);
+padding: 28px 48px;
+text-align: center;
+width: 100%;
+color: #fff;
+}
+
+.par-content h2 {
+margin: 0 0 12px;
+font-size: 1.8rem;
+font-weight: 700;
+}
+
+.par-content p {
+margin: 0;
+font-size: 1.05rem;
+line-height: 1.4;
+color: rgba(255,255,255,0.9);
+}
+
+.divider {
+position: absolute;
+top: -15%;
+bottom: -15%;
+left: 50%;
+width: 6px;
+background: rgba(255,255,255,0.85);
+transform: translateX(-50%) skewX(-12deg);
+z-index: 3;
+border-radius: 2px;
+box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.slogan-rectangle-img {
+  width: 100%;
+  max-width: 1290px;
+height: 420px;
+margin: 64px auto;
+position: relative;
+background: url("../../../../../assets/gym.png") center/cover no-repeat;
+overflow: hidden;
+}
+
+.rectangle-overlay {
+position: absolute;
+inset: 0;
+background: linear-gradient(to right, rgba(0,0,0,0.65), rgba(0,0,0,0));
+z-index: 1;
+}
+
+.rectangle-content {
+position: absolute;
+inset: 0;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 0 40px;
+color: #fff;
+z-index: 2;
+opacity: 0;
+transform: translateY(15px);
+animation: fadeInUp 1.2s ease forwards;
+}
+
+.slogan-rectangle-img h3 {
+margin: 0 0 12px;
+font-size: 2.2rem;
+font-weight: 700;
+}
+
+.slogan-rectangle-img p {
+margin: 0;
+font-size: 1.2rem;
+line-height: 1.5;
+}
+
+@keyframes fadeInUp {
+0% { opacity: 0; transform: translateY(15px); }
+100% { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSYWNOŚĆ */
+@media (max-width: 900px) {
+.slogan-parallelogram { height: 180px; }
+.par-content h2 { font-size: 1.5rem; }
+.par-content p { font-size: 0.95rem; }
+.slogan-rectangle-img { height: 340px; }
+.slogan-rectangle-img h3 { font-size: 1.8rem; }
+.slogan-rectangle-img p { font-size: 1rem; }
+}
+
+@media (max-width: 600px) {
+.slogan-parallelogram {
+flex-direction: column;
+height: auto;
+}
+.par-left,
+.par-right {
+width: 100%;
+transform: skewX(-12deg);
+margin-bottom: 16px;
+}
+.par-content {
+transform: skewX(12deg);
+padding: 12px 16px;
+}
+.par-content h2 { font-size: 1.2rem; }
+.par-content p { font-size: 0.85rem; }
+
+.slogan-rectangle-img {
+height: 220px;
+margin: 32px auto;
+}
+.slogan-rectangle-img h3 { font-size: 1.4rem; }
+.slogan-rectangle-img p { font-size: 0.9rem; }
+}
+
+@media (max-width: 600px) {
+  .divider {
+    display: none;
+  }
+}
